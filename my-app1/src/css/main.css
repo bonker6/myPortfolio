@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body:not([label]) {
+    background-color: wheat;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.header {
+    background-color: #000;
+    padding: 20px;
+    color: whitesmoke;
+    padding: 25px 100px;
+    font-weight: 600;
+    font-size: xx-large;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+main {
+    margin: 50px 100px;
+    width: 50%;
+    float: left;
+    position: relative;
+    top: 100px;
+}
+
+#isHappyDiv {
+    text-align: center;
+    align-items: center;
+}
+
+aside {
+    width: 20%;
+    margin-top: 50px;
+    margin-left: 5%;
+    float: left;
+    position: relative;
+    top: 75px;
+}
+
+main .users {
+    margin-bottom: 50px;
+    background-color: #222;
+    padding: 20px;
+    transition: transform 0.5s ease;
+}
+
+main .users:hover {
+    transform: scale(1.05);
+}
+
+main .deleteIcon {
+    float: right;
+    color: red;
+    cursor: pointer;
+    transform: scale(2);
+}
+
+main .editIcon {
+    float: right;
+    color: yellow;
+    cursor: pointer;
+    transform: scale(1.7);
+    margin-right: 20px;
+}
+
+main .deleteIcon:hover,
+main .editIcon:hover {
+    opacity: 0.5;
+    transition: 0.3s
+}
+
+form input:not([type='checkbox']),
+form textarea,
+form button,
+#isHappyDiv {
+    width: 90%;
+    padding: 15px 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: 0;
+    background: #222;
+    outline: none;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+label {
+    margin-right: 5px;
+    color: whitesmoke;
+}
+
+aside form input[type='checkbox'] {
+    -webkit-appearance: initial;
+    appearance: initial;
+    width: 12.5px;
+    height: 12.5px;
+    border: none;
+    background: gray;
+    position: relative;
+}
+
+aside form input[type="checkbox"]:checked {
+    background: green;
+}
+
+aside form input[type="checkbox"]:checked:after {
+    content: "\2713";
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+aside form button {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+aside form button:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+.users form {
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.users form input,
+.users form textarea,
+.users form button {
+    border: #000 1px solid;
+    border-radius: 0;
+}
+
+.users form button:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease;
+}
+
+.asideBtn {
+    left: 95%;
+    transform: scale(3);
+    position: fixed;
+    top: 37.5px;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+.asideBtn:hover {
+    transform: scale(3.5);
+    opacity: 0.5;
+    transition: 0.3s
+}
+
+.asideform {
+    width: 40%;
+    float: right;
+    right: 50%;
+    background-color: #000;
+    padding: 1%;
+    margin-top: 90px;
+    position: fixed;
+    left: 58%;
+    align-self: center;
+    top: -70px;
+    z-index: 2;
+}
+
+form input {
+    position: relative;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    margin-top: 10px;
+}
+
+form {
+    position: relative;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+form button:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease;
+}
+
+#isHappyDiv {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    flex-direction: column-reverse;
+}
+
+.asideform #isHappyDiv {
+    background-color: #000;
+}
+
+.asideform form input {
+    margin-top: 20px;
+}
