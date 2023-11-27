@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --transition: 4s cubic-bezier(.05, .5, 0, 1);
+}
+
+@font-face {
+    font-family: kamerik-3d;
+    src: url(/space3d/fonts/kamerik205-heavy.woff2);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: merriweather-italic-3d;
+    src: url(/space3d/fonts/merriweather-regular-italic.woff2);
+}
+
+body {
+    background-color: black;
+    color: #ffffff;
+    font-family: kamerik-3d;
+}
+
+.layer-2 {
+    background-image: url(/space3d/img/poster_event_1597637.png);
+    transform: scale(2.5) translateZ(-25);
+    position: fixed;
+    inset: -10vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(2.5) translateZ(-25);
+}
+
+.layer-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 900;
+    transform: translateZ(30px);
+    top: 47%;
+    left: 45%;
+    z-index: 1;
+    position: absolute;
+    scale: 7;
+}
+
+.bg3d {
+    height: 100vh;
+    min-height: 500px;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--move-x)) rotateY(var(--move-y));
+    will-change: transform;
+    transition: transform var(--transition);
+}
+
+.layers {
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+    width: calc(var(--index) * 10);
+    height: calc(var(--index) * 10);
+    left: 44%;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 900;
+    transform: translateZ(30px);
+    top: 70%;
+    left: 47.5%;
+    z-index: 1;
+    position: absolute;
+    scale: 5;
+    border-radius: 10em;
+    border: rgb(255 255 255 / .4) 1px solid;
+    outline: none;
+    color: #ffffff;
+    background-color: transparent;
+    padding: 5px;
+    margin-top: 10vh;
+}
+
+.layer-3 {
+    background-image: url(/space3d/img/layer-6.png);
+    position: absolute;
+    inset: -10vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(2.5) translateZ(50px);
+}
+
+.layer-2,
+.layer-3 {
+    pointer-events: none;
+}
